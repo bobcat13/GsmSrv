@@ -8,7 +8,15 @@
     <name>HW</name>
 
     <properties>
-        <spring.version>4.1.1.RELEASE</spring.version>
+        <!-- Generic props-->
+        <java.version>1.8</java.version>
+        <!-- Spring -->
+        <spring.version>4.1.6.RELEASE</spring.version>
+        <!-- Java EE -->
+        <javax.servlet.version>2.5</javax.servlet.version>
+        <javax.servlet.jsp.version>2.1</javax.servlet.jsp.version>
+        <!-- Test -->
+        <junit.version>4.12</junit.version>
     </properties>
 
     <dependencies>
@@ -33,14 +41,14 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
+            <version>${javax.servlet.version}</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
             <artifactId>jsp-api</artifactId>
-            <version>2.1</version>
+            <version>${javax.servlet.jsp.version}</version>
             <scope>provided</scope>
         </dependency>
 
@@ -54,7 +62,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -65,8 +73,8 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
             <plugin>
