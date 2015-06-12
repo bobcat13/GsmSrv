@@ -1,4 +1,4 @@
-package com.springapp.mvc;
+package com.gsmsrv.web;
 
 import org.junit.Before;
 import org.junit.Test;
